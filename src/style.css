@@ -125,17 +125,7 @@ input {
     
 }
 
-
-h2{
-    text-align: center;
-    color: #808080;
-    font-size: 30px;
-    margin: 20px 0 60px;
-    padding: 10px 0 0 0;
-    text-transform: uppercase;
-}
-
-
+ 
 .tempMaxMin {
     padding: 5px 0 30px 0;
 }
@@ -194,10 +184,17 @@ p {
     font-weight: 400;
 }
 
-h2 {
+.gitHubLink {
+    display: block;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #AAB2B1;
     font-size: 12px;
     font-weight: 400;
+    padding: 0 0 30px 0;
+    text-decoration: none;
+}
+
+.gitHubLink:hover {
+    color: #84045c;
 }
