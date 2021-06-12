@@ -69,22 +69,26 @@ function getCurrentDate (date) {
    //Access temperature and city of OpenWeather 
       
      
-      function showTemperature (response) {
-        console.log(response.data)
+      function showTemperature (response) {        
         let getCurrentTemperature = Math.round(response.data.main.temp);
-        let currentTemp = document.querySelector("#max-temp");
-        currentTemp.innerHTML = `${getCurrentTemperature}`
+        let currentTemp = document.querySelector("#max-temp");       
         let getMinTemperature = Math.round(response.data.main.temp_min);
-        let minimumTemp = document.querySelector("#min-temp");
-        minimumTemp.innerHTML = `${getMinTemperature}`
+        let minimumTemp = document.querySelector("#min-temp");        
         let getWindSpeed = response.data.wind.speed;
-        let windSpeed = document.querySelector("#wind-speed");
-        windSpeed.innerHTML = `${getWindSpeed.toFixed(1)}`
+        let windSpeed = document.querySelector("#wind-speed");        
         let getHumidityPerc = Math.round(response.data.main.humidity);
         let humidityPerc = document.querySelector("#humidity");
-        humidityPerc.innerHTML = `${getHumidityPerc}`
-       
+        let iconElement = document.querySelector("#icon");
+        let getWeatherDescription = response.data.weather[0].description;
+        let weatherDescription = document.querySelector("#weather-description");
 
+             
+        currentTemp.innerHTML = `${getCurrentTemperature}`
+        minimumTemp.innerHTML = `${getMinTemperature}`
+        windSpeed.innerHTML = `${getWindSpeed.toFixed(1)}`
+        humidityPerc.innerHTML = `${getHumidityPerc}`
+        iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+        weatherDescription.innerHTML = `${getWeatherDescription}` 
       
   
   //Convert Celsius Buttons      
@@ -117,15 +121,12 @@ function getCurrentDate (date) {
         let windLocSpeed = document.querySelector("#wind-speed");        
         let getHumidityLocPerc = Math.round(response.data.list[2].main.humidity);
         let humidityLocPerc = document.querySelector("#humidity");
-     // let iconElement = document.querySelector("#weather-icon"); 
-        
-
+                 
         currentLocCity.innerHTML = `${getCurrentLocCity}`;
         currentLocTemp.innerHTML = `${getCurrentLocTemperature}`
         minimumLocTemp.innerHTML = `${getMinLocTemperature}`
         windLocSpeed.innerHTML = `${getWindLocSpeed.toFixed(1)}`
-        humidityLocPerc.innerHTML = `${getHumidityLocPerc}`
-        //iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+        humidityLocPerc.innerHTML = `${getHumidityLocPerc}`               
   }
   
   function currentPosition (position) {
