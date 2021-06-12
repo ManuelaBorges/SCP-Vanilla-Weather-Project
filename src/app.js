@@ -32,10 +32,15 @@ function getCurrentDate (date) {
     "December"
   ];
   let month = months[date.getMonth()];
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
   
-  return `${day}, ${monthDay} of ${month} of ${year}`;
-  
-  }
+  if (minutes<10) {
+  return `${day}, ${monthDay} of ${month} of ${year}  |  ${hours}:0${minutes}`;
+  } else { 
+  return `${day}, ${monthDay} of ${month} of ${year}  |  ${hours}:${minutes}`;
+}
+}
   
   let currentDate = document.querySelector("#date");
   let now = new Date();
@@ -49,9 +54,9 @@ function getCurrentDate (date) {
   function searchCity (event) {
       event.preventDefault();
       let inputCity = document.querySelector("#input-city").value;
-        
-      let searchedCity = document.querySelector("h5");
-      searchedCity.innerHTML = `${inputCity} 🌎 `;
+            
+      let searchedCity = document.querySelector("#user-city");
+      searchedCity.innerHTML = `${inputCity}`;
   
       let apiKey = "3104ffa0cef5c837b609ed2dcb82062f";  
       let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`;
@@ -65,6 +70,7 @@ function getCurrentDate (date) {
       
      
       function showTemperature (response) {
+        console.log(response.data)
         let getCurrentTemperature = Math.round(response.data.main.temp);
         let currentTemp = document.querySelector("#max-temp");
         currentTemp.innerHTML = `${getCurrentTemperature}`
@@ -77,6 +83,8 @@ function getCurrentDate (date) {
         let getHumidityPerc = Math.round(response.data.main.humidity);
         let humidityPerc = document.querySelector("#humidity");
         humidityPerc.innerHTML = `${getHumidityPerc}`
+       
+
       
   
   //Convert Celsius Buttons      
@@ -99,21 +107,25 @@ function getCurrentDate (date) {
   //Current Location Button
   
   function showCurrentLocationData (response) {
-    let getCurrentLocCity = response.data.list[1].name;
-        let currentLocCity = document.querySelector("h5");
-        currentLocCity.innerHTML = `${getCurrentLocCity} 🌍`
+        let getCurrentLocCity = response.data.list[1].name;
+        let currentLocCity = document.querySelector("#user-city");            
         let getCurrentLocTemperature = Math.round(response.data.list[2].main.temp);
-        let currentLocTemp = document.querySelector("#max-temp");
-        currentLocTemp.innerHTML = `${getCurrentLocTemperature}`
+        let currentLocTemp = document.querySelector("#max-temp");        
         let getMinLocTemperature = Math.round(response.data.list[2].main.temp_min);
-        let minimumLocTemp = document.querySelector("#min-temp");
-        minimumLocTemp.innerHTML = `${getMinLocTemperature}`
+        let minimumLocTemp = document.querySelector("#min-temp");        
         let getWindLocSpeed = response.data.list[3].wind.speed;
-        let windLocSpeed = document.querySelector("#wind-speed");
-        windLocSpeed.innerHTML = `${getWindLocSpeed.toFixed(1)}`
+        let windLocSpeed = document.querySelector("#wind-speed");        
         let getHumidityLocPerc = Math.round(response.data.list[2].main.humidity);
         let humidityLocPerc = document.querySelector("#humidity");
+     // let iconElement = document.querySelector("#weather-icon"); 
+        
+
+        currentLocCity.innerHTML = `${getCurrentLocCity}`;
+        currentLocTemp.innerHTML = `${getCurrentLocTemperature}`
+        minimumLocTemp.innerHTML = `${getMinLocTemperature}`
+        windLocSpeed.innerHTML = `${getWindLocSpeed.toFixed(1)}`
         humidityLocPerc.innerHTML = `${getHumidityLocPerc}`
+        //iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   }
   
   function currentPosition (position) {
@@ -141,10 +153,10 @@ function getCurrentDate (date) {
   
     let maxTempElement = document.querySelector("#max-temp");
     let maxTemperature = maxTempElement.innerHTML;
-    maxTempElement.innerHTML = Math.round((maxTemperature * 9 ) / 5 + 32);
+    maxTempElement.innerHTML = `${Math.round((maxTemperature * 9 ) / 5 + 32)}`;
     let minTempElement = document.querySelector("#min-temp");
     let minTemperature = minTempElement.innerHTML;
-    minTempElement.innerHTML = Math.round((minTemperature * 9 ) / 5 + 32);
+    minTempElement.innerHTML = `${Math.round((minTemperature * 9 ) / 5 + 32)}`;
   }
   
   

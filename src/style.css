@@ -2,22 +2,40 @@ body {
     background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/551/original/background.jpg?1623432847");
 }
 
-.city {
-    padding: 20px 0 10px 0; 
-}
-.weatherApp {
+.dateUnits, .weatherAppCurrentTemp, .forecastApp {
     background-color: #ffffff99;
-    border-color: #04253e;
+    border-color: #04253e99;
     border-style: outset;
     border-width: 2px;
     border-radius: 20PX;
     box-shadow: 0 0 5px 5px #04253e60;
-    height: 650px;
-    padding: 30px;
-    margin: 50px auto;
     text-align: center;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 700px;
+}
+
+.dateUnits {
+    height: 100px;
+    padding: 25px;
+    margin: 50px auto 10px;
+    width: 750px;   
+}
+
+.date {
+    text-align: center;
+    color: #84045c;
+    font-size: 20px;
+    padding: 15px 12px 10px 12px;   
+}
+
+
+.city {
+    padding: 20px 0 10px 0; 
+}
+.weatherAppCurrentTemp {    
+    height: 450px;
+    padding: 10px;
+    margin: 20px auto;
+    width: 750px;
 }
 
 .search {
@@ -44,67 +62,25 @@ body {
     border: none;
   }
 
-.fahrenheitLink, .celsiusLink {
-    text-decoration: none;
-    color: #2e856e;
-}
-
 a:hover {
-    color: #053050;
+    color: #3792CB;
 }
-
 
 .unitsButton {
     background: none;
     background-color: none;
     border: none;
     font-size: 25px;
-    color: #2e856e;
-    padding: 0 30px 0 10px;
+    font-weight: 400;
+    color: #2e856e;    
+    text-align: left;
+    padding: 3px 12px 0 12px;
   }
 
-
-h1, .temperatureMax {
-   text-align: center;
-   color: #053470;
-   font-size: 40px;
-   margin: 40px 0;
+  .fahrenheitLink, .celsiusLink {
+    text-decoration: none;
+    color: #2e856e;
 }
-
-h2 {
-    text-align: center;
-    color: #84045c;
-    font-size: 20px;
-    margin: 40px 0;
-    padding: 15px 0 0 30px;
-    }
-
-h3, .temperatureMin {
-    text-align: center;
-    color: #053470;
-    font-size: 40px;
-    margin: 30px 0 60px 0;
-}
-
-
-        
-h4 {
-    text-align: center;
-    color: #84045c;
-    font-size: 25px;
-    margin: 30px 0 60px 0;
-    padding: 15px 0 0 30px;
-}
-
-h5{
-    text-align: center;
-    color: #767676;
-    font-size: 40px;
-    margin: 20px 0 40px;
-    padding: 10px 0 0 0;
-    text-transform: uppercase;
-}
-    
 
 input {
     padding: 2px 80px 2px 10px;
@@ -112,6 +88,72 @@ input {
     text-align: left;
     border-radius: 10px;
     border-color: #04253e;
+}
+
+
+
+.weatherIcon {
+    height: 100px;
+   
+}
+
+.cityDescription, .weatherInfo {
+    list-style: none;
+    text-align: center;
+    padding: 0 0 0 10px;
+}
+
+.userCity {
+    color: #053470;
+    font-size: 35px;
+    padding: 60px 0 15px 0;
+    text-transform: uppercase;
+}
+
+.weatherDesc {
+    color: #8c8c8c;
+    font-size: 25px;
+    
+}
+
+
+h2{
+    text-align: center;
+    color: #8c8c8c;
+    font-size: 30px;
+    margin: 20px 0 60px;
+    padding: 10px 0 0 0;
+    text-transform: uppercase;
+}
+
+
+.tempMaxMin {
+    padding: 5px 0 30px 0;
+}
+
+.temperatureMax, .tempMaxMin {
+    color: #053470;
+    font-size: 30px;
+ }
+ 
+ 
+ .temperatureMin {
+     text-align: center;
+     color: #2e856e;
+     font-size: 25px;
+}
+  
+.windSpeed {
+    color: #8c8c8c;
+    font-size: 20px;
+}
+
+
+.forecastApp {
+    height: 200px;
+    padding: 40px 30px 30px 30px;
+    margin: 10px auto 50px;
+    width: 750px; 
 }
 
 .row {
@@ -125,8 +167,9 @@ input {
 }
 
 .temp {
-    color: #5c0499;
+    color: #5c0499; 
 }
+
 
 p {
     text-align: center;
@@ -136,7 +179,7 @@ p {
     font-weight: 400;
 }
 
-h6 {
+h2 {
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: #AAB2B1;
