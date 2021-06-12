@@ -1,4 +1,145 @@
-h1 {
-    color: lightblue;
+body {
+    background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/010/551/original/background.jpg?1623432847");
+}
+
+.city {
+    padding: 20px 0 10px 0; 
+}
+.weatherApp {
+    background-color: #ffffff99;
+    border-color: #04253e;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 20PX;
+    box-shadow: 0 0 5px 5px #04253e60;
+    height: 650px;
+    padding: 30px;
+    margin: 50px auto;
     text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 700px;
+}
+
+.search {
+    background: none;
+    background-color: none;
+    border: none;
+    size: 20px;
+}
+
+.magnifier-icon {
+    font-size: 22px;
+    color: #053470;
+    padding: 0 10px 0 0;
+}
+
+.globe-icon {
+    font-size: 22px;
+    color: #053470;
+}
+
+.location {
+    background: none;
+    background-color: none;
+    border: none;
+  }
+
+.fahrenheitLink, .celsiusLink {
+    text-decoration: none;
+    color: #2e856e;
+}
+
+a:hover {
+    color: #053050;
+}
+
+
+.unitsButton {
+    background: none;
+    background-color: none;
+    border: none;
+    font-size: 25px;
+    color: #2e856e;
+    padding: 0 30px 0 10px;
+  }
+
+
+h1, .temperatureMax {
+   text-align: center;
+   color: #053470;
+   font-size: 40px;
+   margin: 40px 0;
+}
+
+h2 {
+    text-align: center;
+    color: #84045c;
+    font-size: 20px;
+    margin: 40px 0;
+    padding: 15px 0 0 30px;
+    }
+
+h3, .temperatureMin {
+    text-align: center;
+    color: #053470;
+    font-size: 40px;
+    margin: 30px 0 60px 0;
+}
+
+
+        
+h4 {
+    text-align: center;
+    color: #84045c;
+    font-size: 25px;
+    margin: 30px 0 60px 0;
+    padding: 15px 0 0 30px;
+}
+
+h5{
+    text-align: center;
+    color: #767676;
+    font-size: 40px;
+    margin: 20px 0 40px;
+    padding: 10px 0 0 0;
+    text-transform: uppercase;
+}
+    
+
+input {
+    padding: 2px 80px 2px 10px;
+    margin: 30px 15px;
+    text-align: left;
+    border-radius: 10px;
+    border-color: #04253e;
+}
+
+.row {
+    margin: 20px 10px;
+ 
+}
+
+.days {
+    color: #08535c;
+    font-weight: 500;
+}
+
+.temp {
+    color: #5c0499;
+}
+
+p {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #053050;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+h6 {
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #AAB2B1;
+    font-size: 12px;
+    font-weight: 400;
 }
