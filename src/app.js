@@ -41,6 +41,11 @@ function getCurrentDate (date) {
   return `${day}, ${monthDay} of ${month} of ${year}  |  ${hours}:${minutes}`;
 }
 }
+
+
+
+
+
   
   let currentDate = document.querySelector("#date");
   let now = new Date();
@@ -84,7 +89,7 @@ function getCurrentDate (date) {
         iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
         weatherDescription.innerHTML = `${response.data.weather[0].description}` 
       
-   
+        
   }
   
   //Current Location Button
@@ -167,5 +172,5 @@ function getCurrentDate (date) {
   let celsiusLink = document.querySelector("#celsius-link");
   celsiusLink.addEventListener("click", showCelsiusTemperature);
 
-  
+  displayForecast();
   

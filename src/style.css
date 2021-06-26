@@ -155,24 +155,25 @@ input {
 
 
 .forecastApp {
-    height: 200px;
-    padding: 40px 30px 30px 30px;
+    height: 175px;
+    padding: 40px 35px 30px 35px;
     margin: 10px auto 50px;
     width: 750px; 
 }
 
-.row {
-    margin: 20px 10px;
- 
-}
 
 .days {
     color: #08535c;
     font-weight: 500;
-}
+    padding: 10px 10px 20px 10px;
+ }
 
 .temp {
     color: #5c0499; 
+}
+
+.forecastMin {
+    color: #2e856e;
 }
 
 
@@ -188,13 +189,14 @@ p {
     display: block;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #AAB2B1;
+    color: #84045c;
     font-size: 12px;
     font-weight: 400;
     padding: 0 0 30px 0;
     text-decoration: none;
 }
 
+
 .gitHubLink:hover {
-    color: #84045c;
+    color: #AAB2B1;
 }
