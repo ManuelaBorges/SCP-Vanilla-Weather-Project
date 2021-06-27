@@ -43,10 +43,25 @@ function getCurrentDate (date) {
 }
 
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast-app");
 
+  let forecastHTML = `<div class="row">`;
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  days.forEach(function(day){
 
+  forecastHTML = forecastHTML + `
+  <div class="col-2">
+  <div class="col days" id="forecast-day">${day}</div>
+  <div class="col temp"><span class="forecastIcon" id="forecast-icon" >☀</span> <span class="forecastMax" id="forecast-max" >20º</span>/ <span class="forecastMin" id="forecast-min">9º</span></div>
+  </div>   
+  `;
+})
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
-  
+ 
   let currentDate = document.querySelector("#date");
   let now = new Date();
   currentDate.innerHTML = getCurrentDate(now);
@@ -88,10 +103,9 @@ function getCurrentDate (date) {
         humidityPerc.innerHTML = `${Math.round(response.data.main.humidity)}`
         iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
         weatherDescription.innerHTML = `${response.data.weather[0].description}` 
-      
-        
   }
-  
+
+ 
   //Current Location Button
   
   function showCurrentLocationData (response) {

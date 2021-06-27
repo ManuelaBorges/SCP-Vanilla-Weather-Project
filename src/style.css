@@ -159,6 +159,7 @@ input {
     padding: 40px 35px 30px 35px;
     margin: 10px auto 50px;
     width: 750px; 
+
 }
 
 
@@ -166,7 +167,7 @@ input {
     color: #08535c;
     font-weight: 500;
     padding: 10px 10px 20px 10px;
- }
+}
 
 .temp {
     color: #5c0499; 
@@ -176,6 +177,10 @@ input {
     color: #2e856e;
 }
 
+.col-2 {
+    
+    text-align: center;
+}
 
 p {
     text-align: center;
