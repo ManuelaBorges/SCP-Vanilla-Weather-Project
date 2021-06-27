@@ -128,8 +128,7 @@ function displayForecast(response) {
         iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list[1].weather[0].icon}@2x.png`);
         weatherDescription.innerHTML = `${response.data.list[1].weather[0].description}`
 
-       
-    }
+     }
 
   
   function currentPosition (position) {
@@ -139,7 +138,6 @@ function displayForecast(response) {
     let apiUrl = `https://api.openweathermap.org/data/2.5/find?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(showCurrentLocationData);
   }
-
 
   function getCurrentLocation (event) {
     event.preventDefault();
