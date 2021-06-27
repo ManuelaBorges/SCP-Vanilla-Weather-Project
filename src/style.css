@@ -155,7 +155,7 @@ input {
 
 
 .forecastApp {
-    height: 175px;
+    height: 200px;
     padding: 40px 35px 30px 35px;
     margin: 10px auto 50px;
     width: 750px; 
@@ -166,11 +166,14 @@ input {
 .days {
     color: #08535c;
     font-weight: 500;
-    padding: 10px 10px 20px 10px;
+    padding: 10px 10px 10px 10px;
 }
+
+
 
 .temp {
     color: #5c0499; 
+    padding: 10px 10px 10px 10px;
 }
 
 .forecastMin {
