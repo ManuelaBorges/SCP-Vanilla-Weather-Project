@@ -78,15 +78,11 @@ body {
       cursor: default;
   }
 
-.celsiusLink, .celsiusLink:hover, .fahrenheitLink, .fahrenheitLink:hover {
-    color: #2e856e;   
-}
-
-.active, .active:hover {
+.active {
     color: #84045c;    
 }
 
-.celsiusLink, .fahrenheitLink, .active:hover {
+.celsiusLink {
     text-decoration: none;
     }
 
