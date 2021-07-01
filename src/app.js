@@ -60,8 +60,8 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `
   <div class="col-2">
   <div class="col days" id="forecast-day">${formatDay(forecastDay.dt)}</div>
-  <div class="col"><span class="forecastIcon" id="forecast-icon">
-  <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="42"/> </span></div>
+  <div class="col forecastIcon"><span id="forecast-icon">
+  <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="" width="75"/> </span></div>
   <div class="col temp><span class="forecastMax" id="forecast-max" >${Math.round(forecastDay.temp.max)}º</span>/ <span class="forecastMin" id="forecast-min">${Math.round(forecastDay.temp.min)}º</span></div>
   </div>   
   `;
@@ -103,6 +103,7 @@ function displayForecast(response) {
       weatherDescription.innerHTML = `${response.data.weather[0].description}` 
 
       getForecast(response.data.coord);
+     
       }
 
 
@@ -127,7 +128,9 @@ function displayForecast(response) {
         humidityPerc.innerHTML = `${Math.round(response.data.list[2].main.humidity)}`
         iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list[1].weather[0].icon}@2x.png`);
         weatherDescription.innerHTML = `${response.data.list[1].weather[0].description}`
-
+    
+        getForecast(response.data.list[0].coord);
+        
      }
 
   

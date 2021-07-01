@@ -151,11 +151,14 @@ input {
 
 
 .forecastApp {
-    height: 200px;
+    height: 250px;
     padding: 40px 35px 30px 35px;
     margin: 10px auto 50px;
     width: 750px; 
+}
 
+.forecastIcon {
+    padding: 7.5px 0 15px 0;
 }
 
 
